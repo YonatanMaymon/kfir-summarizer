@@ -1,0 +1,30 @@
+name = "kfir-summarizer"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+preview_urls = false
+
+[vars]
+# Language the summary is written in, e.g. "English" or "Hebrew".
+SUMMARY_LANGUAGE = "English"
+# ISO-639-1 hint for transcription. Leave empty to let the model auto-detect.
+TRANSCRIBE_LANGUAGE = "he"
+
+[[kv_namespaces]]
+binding = "VOICE_KV"
+id = "a30ca890e3d349f69fe58a4c44438d45"
+
+# The webhook enqueues work here and returns 200 immediately; the consumer below
+# runs the slow pipeline (waitUntil is capped at 30s, a queue consumer is not).
+[[queues.producers]]
+binding = "VOICE_QUEUE"
+queue = "voice-jobs"
+
+[[queues.consumers]]
+queue = "voice-jobs"
+max_batch_size = 1
+max_retries = 1
+
+[observability]
+enabled = true

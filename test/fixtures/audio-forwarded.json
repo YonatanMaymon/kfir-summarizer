@@ -1,0 +1,33 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "102290129340398",
+      "changes": [
+        {
+          "field": "messages",
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": { "display_phone_number": "15550783881", "phone_number_id": "106540352242922" },
+            "contacts": [{ "profile": { "name": "Yonatan" }, "wa_id": "972501234567" }],
+            "messages": [
+              {
+                "from": "972501234567",
+                "id": "wamid.AUDIO1",
+                "timestamp": "1759640000",
+                "type": "audio",
+                "context": { "forwarded": true },
+                "audio": {
+                  "mime_type": "audio/ogg; codecs=opus",
+                  "sha256": "abc123",
+                  "id": "1003383421387256",
+                  "voice": true
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

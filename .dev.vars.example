@@ -1,0 +1,8 @@
+# Copy to .dev.vars for `wrangler dev`. In production set each with `npx wrangler secret put <NAME>`.
+WHATSAPP_TOKEN=
+WHATSAPP_PHONE_NUMBER_ID=
+WHATSAPP_APP_SECRET=
+WEBHOOK_VERIFY_TOKEN=
+ALLOWED_SENDERS=
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
